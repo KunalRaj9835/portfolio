@@ -18,7 +18,7 @@ function Experience() {
 
       <div className="pt-24">
         <div className="flex flex-col gap-6">
-          {experiences.map((experience, index) => (
+          {experiences.slice().reverse().map((experience, index) => (
             <div
               id={`sticky-card-${index + 1}`}
               key={index}

@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    id: 1,
+    id: 4,
     title: 'Associate Software Developer',
     company: "Valise IT Groups",
     duration: "(November 2025 - Present)",
@@ -11,11 +11,11 @@ export const experiences = [
     ],
     image: '/logo/valise.png',
     description:
-      'Led development across four production applications, owning one project end-to-end from architecture to deployment. Built real-time analytics dashboards enabling instant data updates and improving operational task speed by 50%. Designed scalable backend services with optimized REST APIs, role-based workflows, and real-time synchronization, increasing system performance by 30–40%. Improved delivery efficiency through workflow automation and CI/CD optimization.'
+      'Led 2 production projects as Project Lead, owning end-to-end delivery from system architecture to deployment, improving delivery timelines by 25% through workflow optimization and automation. Built real-time analytics dashboards enabling HR teams to monitor user interactions and update product data instantly, achieving 50% faster task execution. Designed scalable backend services with optimized REST APIs, role-based workflows, and real-time synchronization.'
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'MERN Stack Developer',
     company: "Nurdd.Club Pvt Ltd",
     duration: "(July 2025 - September 2025)",
@@ -25,25 +25,25 @@ export const experiences = [
     ],
     image: '/logo/Nurdd.png',
     description:
-      'Built core mobile app features including authentication, onboarding, and user profile flows. Developed a modular UI system with 40+ reusable components achieving 70% reuse across screens. Improved cross-platform consistency on Android/iOS and contributed to state management, navigation structure, and local-first data handling.'
+      'Built and shipped cross-platform mobile app using React Native (Expo Bare) and TypeScript, delivering 4-5 end-to-end flows including authentication, onboarding, and user profiles with React Navigation. Designed and implemented 40+ modular UI components achieving 70% component reuse across the application, reducing UI inconsistencies on both Android and iOS platforms.'
   },
 
   {
-    id: 3,
+    id: 2,
     title: "Software Development Intern - FrontEnd",
     company: "TradeVed Pvt Ltd",
     duration: "(May 2025 - July 2025)",
     tools: [
-      'Next.js', 'TypeScript', 'SSR', 'ISR',
-      'Vercel', 'SEO Optimization', 'API Caching'
+      'Next.js', 'TypeScript', 'WebSocket', 'Python',
+      'MongoDB', 'Vercel', 'SEO Optimization', 'CI/CD'
     ],
     image: '/logo/TradeVed.png',
     description:
-      'Developed an SEO-first Next.js architecture using SSR and ISR. Implemented authentication middleware, API caching, and performance optimizations such as code splitting and lazy loading. Deployed applications on Vercel using automated CI/CD pipelines ensuring zero-downtime releases.'
+      'Developed real-time stock scanner integrating live data feeds from National Stock Exchange (NSE), implementing WebSocket connections for sub-second data updates across 2,000+ stocks with 99.8% uptime. Managed complete technical documentation spanning 50+ pages and deployed applications on Vercel with automated CI/CD pipelines, achieving zero-downtime releases.'
   },
 
   {
-    id: 4,
+    id: 1,
     title: 'Full Stack Development Intern',
     company: "Alsat Digitech Pvt Ltd",
     duration: "(November 2024 - January 2025)",

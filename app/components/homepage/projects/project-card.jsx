@@ -1,100 +1,172 @@
 // @flow strict
 
 import * as React from 'react';
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaCheckCircle, FaLightbulb, FaTools } from "react-icons/fa";
+import { IoMdBriefcase } from "react-icons/io";
+import { MdTimeline } from "react-icons/md";
+import Image from 'next/image';
+import { FaYoutube } from "react-icons/fa";
 
 function ProjectCard({ project }) {
+  const [showFullDescription, setShowFullDescription] = React.useState(false);
 
   return (
-    <div className="bg-[#2F2F2F] border-[#1b2c68a0] relative rounded-lg">
-      {/* Top Gradient Line */}
-      <div className="flex flex-row">
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-        <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
-      </div>
+<div className="bg-black border border-[#2a2a2a] relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:border-violet-500/60 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]">
 
-      {/* Title Bar */}
-      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
-        <div className="flex flex-row space-x-1 lg:space-x-2 absolute top-1/2 -translate-y-1/2">
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-400"></div>
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-[#23950A]"></div>
+
+      {/* Animated gradient border effect */}
+      
+      {/* Top bar with category badge */}
+<div className="flex items-center justify-between px-4 lg:px-6 py-3 bg-[#0d0d0d] border-b border-[#2a2a2a]">
+
+        <div className="flex items-center gap-3">
+          <div className="flex gap-1.5">
+            <div className="h-3 w-3 rounded-full bg-red-500"></div>
+            <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
+            <div className="h-3 w-3 rounded-full bg-green-500"></div>
+          </div>
+          <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full border border-violet-500/30">
+            {project.category}
+          </span>
         </div>
-        <p className="text-center ml-3 text-[#fff] text-base lg:text-xl">
-          {project.name}
-        </p>
+        
+        {/* Action buttons */}
+        <div className="flex gap-2">
+  {project.code && (
+    <a
+      href={project.code}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-400 transition-all duration-300 hover:scale-110"
+      title="View Code"
+    >
+      <FaGithub className="w-4 h-4" />
+    </a>
+  )}
+
+  {project.youtube && (
+    <a
+      href={project.youtube}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/30 hover:border-red-400 transition-all duration-300 hover:scale-110"
+      title="Watch Demo Video"
+    >
+      <FaYoutube className="w-4 h-4" />
+    </a>
+  )}
+
+  {project.demo && (
+    <a
+      href={project.demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 rounded-lg bg-violet-500/10 text-violet-400 hover:bg-violet-500/20 border border-violet-500/30 hover:border-violet-400 transition-all duration-300 hover:scale-110"
+      title="Live Demo"
+    >
+      <FaExternalLinkAlt className="w-4 h-4" />
+    </a>
+  )}
+</div>
+
       </div>
 
-      {/* Project Code Display */}
-      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-        <code className="font-mono text-xs md:text-sm lg:text-base leading-relaxed">
-          <div className="blink">
-            <span className="mr-2 text-pink-500">const</span>
-            <span className="mr-2 text-white">project</span>
-            <span className="mr-2 text-pink-500">=</span>
-            <span className="text-gray-400">{'{'}</span>
+      {/* Main content */}
+      <div className="px-4 lg:px-6 py-5 lg:py-6">
+        {/* Project title and meta */}
+        <div className="mb-4">
+          <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
+            {project.name}
+          </h3>
+          
+          <div className="flex flex-wrap gap-3 text-xs text-gray-400">
+            <div className="flex items-center gap-1.5">
+              <IoMdBriefcase className="text-violet-400" />
+              <span>{project.company}</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <MdTimeline className="text-emerald-400" />
+              <span>{project.timeline}</span>
+            </div>
           </div>
+        </div>
 
-          <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
-            <span className="text-gray-400">&apos;</span>
-            <span className="text-amber-300">{project.name}</span>
-            <span className="text-gray-400">&apos;,</span>
+        {/* Problem Statement */}
+        <div className="mb-4">
+          <div className="flex items-center gap-2 mb-2">
+            <FaLightbulb className="text-amber-400 flex-shrink-0" />
+            <h4 className="text-sm font-semibold text-amber-300 uppercase tracking-wide">Problem</h4>
           </div>
+          <p className="text-sm text-gray-300 leading-relaxed pl-6">
+            {project.problem}
+          </p>
+        </div>
 
-          <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">tools:</span>
-            <span className="text-gray-400"> [&apos;</span>
-            {project.tools.map((tag, i) => (
-              <React.Fragment key={i}>
-                <span className="text-amber-300">{tag}</span>
-                {project.tools?.length - 1 !== i && (
-                  <span className="text-gray-400">&apos;, &apos;</span>
-                )}
-              </React.Fragment>
+        {/* Solution */}
+        <div className="mb-4">
+          <div className="flex items-center gap-2 mb-2">
+            <FaTools className="text-blue-400 flex-shrink-0" />
+            <h4 className="text-sm font-semibold text-blue-300 uppercase tracking-wide">Solution</h4>
+          </div>
+          <p className="text-sm text-gray-300 leading-relaxed pl-6">
+            {project.solution}
+          </p>
+        </div>
+
+        {/* Impact metrics */}
+        <div className="mb-4">
+          <div className="flex items-center gap-2 mb-2">
+            <FaCheckCircle className="text-emerald-400 flex-shrink-0" />
+            <h4 className="text-sm font-semibold text-emerald-300 uppercase tracking-wide">Impact</h4>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-6">
+            {project.impact.map((item, index) => (
+              <div key={index} className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></div>
+                <span className="text-xs text-gray-300">{item}</span>
+              </div>
             ))}
-            <span className="text-gray-400">&apos;],</span>
           </div>
+        </div>
 
-          <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">description:</span>
-            <span className="text-cyan-400">{' ' + project.description}</span>
+        {/* Key highlights - collapsible */}
+        {project.highlights && (
+          <div className="mb-4">
+            <button
+              onClick={() => setShowFullDescription(!showFullDescription)}
+              className="flex items-center gap-2 mb-2 text-violet-400 hover:text-violet-300 transition-colors"
+            >
+              <span className="text-sm font-semibold uppercase tracking-wide">
+                Key Highlights {showFullDescription ? '▼' : '▶'}
+              </span>
+            </button>
+            
+            {showFullDescription && (
+              <div className="space-y-2 pl-6 animate-fadeIn">
+                {project.highlights.map((highlight, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-violet-400 mt-1.5 flex-shrink-0"></div>
+                    <span className="text-xs text-gray-300">{highlight}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
+        )}
 
-          {project.code && (
-            <div className="ml-4 lg:ml-8 mr-2">
-              <span className="text-white">code:</span>{' '}
-              <a
-                href={project.code}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-emerald-400 hover:text-emerald-300 underline inline-flex items-center gap-1"
+        {/* Tech stack */}
+        <div className="border-t border-[#1b2c68a0] pt-4 mt-4">
+          <div className="flex flex-wrap gap-2">
+            {project.tools.map((tool, index) => (
+              <span
+                key={index}
+                className="text-xs px-3 py-1 rounded-full bg-violet-500/10 text-violet-300 border border-violet-500/20 hover:border-violet-400 hover:bg-violet-500/20 transition-all duration-300"
               >
-                <FaGithub className="inline" /> <span>&apos;View Code&apos;</span>
-              </a>
-              <span className="text-gray-400">,</span>
-            </div>
-          )}
-
-          {project.demo && (
-            <div className="ml-4 lg:ml-8 mr-2">
-              <span className="text-white">demo:</span>{' '}
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-violet-400 hover:text-violet-300 underline inline-flex items-center gap-1"
-              >
-                <FaExternalLinkAlt className="inline" /> <span>&apos;Live Demo&apos;</span>
-              </a>
-              <span className="text-gray-400">,</span>
-            </div>
-          )}
-
-          <div>
-            <span className="text-gray-400">{'};'}</span>
+                {tool}
+              </span>
+            ))}
           </div>
-        </code>
+        </div>
       </div>
     </div>
   );

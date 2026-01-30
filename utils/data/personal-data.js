@@ -1,9 +1,9 @@
 export const personalData = {
   name: "Kunal Raj",
   profile: '/profile2.jpeg',
-  designation: "Turn Ideas into Code",
-  description: "Hey, I'm Kunal Raj — a frontend and mobile developer passionate about turning messy, complicated UIs into smooth, pixel-perfect experiences. I thrive on clean design, neat code, and that satisfying click or swipe when everything just works seamlessly. Whether it’s a complex web app or a mobile interface, I enjoy bridging the gap between functionality and visual delight, making every interaction intuitive and enjoyable.",
-  description2: "I fix frontends like puzzles — every detail matters. I believe great UX is invisible yet unforgettable, and I take pride in creating interfaces that feel effortless to use. From web pages to mobile apps, I focus on crafting experiences that are not just visually appealing but also highly functional. Late-night refactors? Guilty — because I know the difference a single tweak can make in creating something truly remarkable.",
+  designation: "Software Engineer & Tech Lead",
+  description: "Hey, I'm Kunal Raj — a Full-Stack Software Engineer specializing in React Native and MERN stack development. I build scalable production applications, real-time systems, and pixel-perfect mobile experiences used by 1K+ users. Currently leading projects at Valise IT Groups, I focus on architecting solutions that balance technical excellence with exceptional user experience.",
+  description2: "I thrive on solving complex technical challenges — from building real-time stock scanners processing 2,000+ securities to architecting mobile apps with 70% component reuse. Whether it's optimizing performance, designing scalable backends, or crafting intuitive interfaces, I believe great engineering is about making the complex feel effortless. I take ownership from architecture to deployment, ensuring every detail contributes to a seamless, production-ready product.",
   phone: '+916203580252',
   email: 'kunalraj3374@gmail.com',
   address: 'Noida, UP, India (Open to relocation)',
