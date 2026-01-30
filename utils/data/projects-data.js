@@ -39,7 +39,7 @@ export const projectsData = [
     youtube: '',
     image: '/projects/analytics.png',
     problem: 'HR teams struggled with monitoring user interaction patterns and updating product data across multiple platforms, leading to slow decision-making and operational inefficiency.',
-    solution: 'Architected real-time analytics dashboard with role-based workflows, instant data synchronization, and optimized REST APIs enabling HR teams to monitor patterns and update data from a single interface.',
+    solution: 'Architected real-time analytics dashboard with role-based workflows, instant data synchronization, and optimized REST APIs enabling HR teams to monitor patterns and update data from a single interface. Note: Demo uses preview data; production contains confidential company information protected by NDA.',
     impact: [
       '50% faster task execution for HR teams',
       'Real-time data updates across platforms',
@@ -49,12 +49,69 @@ export const projectsData = [
     highlights: [
       'End-to-end ownership from architecture to deployment',
       'Built scalable backend with PostgreSQL and Firebase',
-      'Implemented role-based access control for multi-team usage'
+      'Implemented role-based access control for multi-team usage',
+      'Demo showcases architecture with sample data (production under NDA)'
     ]
   },
 
   {
     id: 3,
+    name: 'Keptel Enterprise Website',
+    category: 'Web Application',
+    timeline: 'September 2025 - Present',
+    company: 'Valise IT Groups',
+    tools: ['Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS', 'REST API', 'SEO Optimization'],
+    role: "Full Stack Developer",
+    code: '',
+    demo: 'https://kepteltech.com',
+    youtube: '',
+    image: '/projects/keptel.png',
+    problem: 'Enterprise telecommunications company needed high-performance, SEO-optimized website to showcase products and services while maintaining fast load times and search engine visibility in competitive B2B market.',
+    solution: 'Built production-grade full-stack website using Next.js (frontend) and Node.js (backend) with comprehensive SEO optimization, server-side rendering for performance, and fully responsive design across all devices.',
+    impact: [
+      '108 total impressions with 9.3% CTR (Google Search Console)',
+      '4.1 average search position for target keywords',
+      'Fully optimized Core Web Vitals',
+      'Production deployment with zero downtime'
+    ],
+    highlights: [
+      'Implemented SSR/ISR for optimal SEO performance',
+      'Built complete frontend and backend architecture',
+      'Achieved top 5 search rankings for industry keywords',
+      'Integrated analytics and performance monitoring'
+    ]
+  },
+
+  {
+    id: 4,
+    name: 'Cross-Platform Mobile App (Nurdd)',
+    category: 'Mobile Application',
+    timeline: 'July 2025 - September 2025',
+    company: 'Nurdd Club Pvt Ltd',
+    tools: ['React Native', 'TypeScript', 'Expo Bare Workflow', 'Redux', 'React Navigation'],
+    role: "MERN Stack Developer",
+    code: '',
+    demo: 'https://play.google.com/store/apps/details?id=com.nurdd.test',
+    youtube: '',
+    image: '/projects/nurdd.png',
+    problem: 'Need for a scalable, cross-platform mobile application with consistent UI/UX across Android and iOS while maintaining rapid development cycles and code reusability.',
+    solution: 'Built production-grade mobile app using React Native (Expo Bare) with TypeScript, implementing 4-5 complete user flows (authentication, onboarding, profile) and a modular component architecture.',
+    impact: [
+      '1,000+ downloads on Google Play Store',
+      '70% component reuse across screens',
+      '40+ modular, reusable components',
+      'Eliminated UI inconsistencies on both platforms'
+    ],
+    highlights: [
+      'Published production app with 1K+ active installs',
+      'Architected component-based design system',
+      'Implemented Redux for state management',
+      'Delivered complete authentication & onboarding flows'
+    ]
+  },
+
+  {
+    id: 5,
     name: 'Solana DEX Order Execution Engine',
     category: 'Backend System',
     timeline: 'December 2024',
@@ -82,34 +139,7 @@ export const projectsData = [
   },
 
   {
-    id: 4,
-    name: 'Cross-Platform Mobile App (Nurdd)',
-    category: 'Mobile Application',
-    timeline: 'July 2025 - September 2025',
-    company: 'Nurdd Club Pvt Ltd',
-    tools: ['React Native', 'TypeScript', 'Expo Bare Workflow', 'Redux', 'React Navigation'],
-    role: "MERN Stack Developer",
-    code: '',
-    demo: 'https://play.google.com/store/apps/details?id=com.nurdd.test',
-    youtube: '',
-    image: '/projects/nurdd.png',
-    problem: 'Need for a scalable, cross-platform mobile application with consistent UI/UX across Android and iOS while maintaining rapid development cycles and code reusability.',
-    solution: 'Built production-grade mobile app using React Native (Expo Bare) with TypeScript, implementing 4-5 complete user flows (authentication, onboarding, profile) and a modular component architecture.',
-    impact: [
-      '70% component reuse across screens',
-      'Published on Google Play Store',
-      '40+ modular, reusable components',
-      'Eliminated UI inconsistencies on both platforms'
-    ],
-    highlights: [
-      'Architected component-based design system',
-      'Implemented Redux for state management',
-      'Delivered complete authentication & onboarding flows'
-    ]
-  },
-
-  {
-    id: 5,
+    id: 6,
     name: 'OfferUnlock - Mobile Assessment App',
     category: 'Mobile Application',
     timeline: 'November 2025',
@@ -137,7 +167,7 @@ export const projectsData = [
   },
 
   {
-    id: 6,
+    id: 7,
     name: 'AI Video Atomizer',
     category: 'Full Stack Application',
     timeline: 'December 2024',
@@ -161,33 +191,6 @@ export const projectsData = [
       'Built complete video pipeline (upload → transcript → moments → clips)',
       'Created multi-layer caching (audio, transcript, moments, clips)',
       'Optimized for 10-30 minute videos with dynamic clip distribution'
-    ]
-  },
-
-  {
-    id: 7,
-    name: 'TradeVed Production Website',
-    category: 'Web Application',
-    timeline: 'May 2025',
-    company: 'TradeVed Pvt Ltd',
-    tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Python', 'REST API'],
-    role: "Full Stack Developer",
-    code: '',
-    demo: 'https://tradeved.com',
-    youtube: '',
-    image: '/projects/tradeved.png',
-    problem: 'Trading education platform needed SEO-optimized, high-performance website with authentication, dynamic content modules, and interactive dashboards for 1000+ users.',
-    solution: 'Developed production-grade Next.js website with SSR/ISR for SEO, implemented authentication middleware, dynamic trading modules, and optimized performance through code splitting and lazy loading.',
-    impact: [
-      '60% SEO growth',
-      '45% reduction in Time to Interactive',
-      '20+ responsive pages',
-      'Zero-downtime CI/CD deployment'
-    ],
-    highlights: [
-      'Implemented SSR and ISR for optimal performance',
-      'Built authentication and authorization flows',
-      'Managed 50+ pages of technical documentation'
     ]
   }
 ];
