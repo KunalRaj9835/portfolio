@@ -16,15 +16,16 @@ const Projects = () => {
   return (
     <div id='projects' className="relative z-50 my-12 lg:my-24">
       {/* Section header */}
-      <div className="sticky top-10 z-10">
+      <div className="sticky top-10">
         <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30"></div>
         <div className="flex items-center justify-start relative">
-          <span className="bg-gradient-to-r from-[#1a1a2e] to-[#16213e] absolute left-0 w-fit text-white px-6 py-3 text-xl font-bold rounded-lg border border-violet-500/30 shadow-lg">
+          <span className="bg-[#2F2F2F] absolute left-0 w-fit text-white px-5 py-3 text-xl rounded-md">
             FEATURED PROJECTS
           </span>
-          <span className="w-full h-[2px] bg-gradient-to-r from-violet-600 via-pink-500 to-transparent"></span>
+          <span className="w-full h-[2px] bg-[#2F2F2F]"></span>
         </div>
       </div>
+
 
       {/* Filter buttons */}
       <div className="mt-16 mb-8 flex flex-wrap gap-3 justify-center">
@@ -34,7 +35,7 @@ const Projects = () => {
             onClick={() => setFilter(category)}
             className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
               filter === category
-                ? 'bg-gradient-to-r from-violet-600 to-pink-500 text-white shadow-lg shadow-violet-500/50 scale-105'
+                ? 'bg-[#a78bfa] text-black shadow-lg shadow-violet-500/50 scale-105'
                 : 'bg-[#2F2F2F] text-gray-300 hover:bg-[#3a3a4a] hover:text-white border border-gray-700'
             }`}
           >
