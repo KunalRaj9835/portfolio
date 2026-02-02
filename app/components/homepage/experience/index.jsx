@@ -1,9 +1,10 @@
-import { experiences } from "@/utils/data/experience";
-import Image from "next/image";
-import { FaCode } from "react-icons/fa";
-import ExpCard from "./exp-card.jsx"
+import { experience } from "@/utils/data/experience";
+import ExperienceCard from "./exp-card.jsx";
 
 function Experience() {
+  // Sort by id to maintain order
+  const sortedExperience = [...experience].sort((a, b) => b.id - a.id);
+
   return (
     <div id='experience' className="relative z-50 my-12 lg:my-24">
       <div className="sticky top-10">
@@ -16,24 +17,23 @@ function Experience() {
         </div>
       </div>
 
+      {/* Experience cards with sticky stacking */}
       <div className="pt-24">
         <div className="flex flex-col gap-6">
-          {experiences.slice().reverse().map((experience, index) => (
+          {sortedExperience.map((exp, index) => (
             <div
               id={`sticky-card-${index + 1}`}
-              key={index}
-              className="sticky-card w-full mx-auto max-w-2xl sticky"
+              key={exp.id}
+              className="sticky-card w-full sticky"
               style={{ top: `${100 + index * 50}px` }}
             >
-              <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
-                <ExpCard exp={experience} />
-              </div>
+              <ExperienceCard exp={exp} />
             </div>
           ))}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Experience;

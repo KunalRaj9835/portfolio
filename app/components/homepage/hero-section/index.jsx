@@ -60,19 +60,24 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="order-1 lg:order-2 bg-[#2F2F2F] border-[#1b2c68a0] relative rounded-lg">
-          <div className="flex flex-row">
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-            <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
-          </div>
-          <div className="px-4 lg:px-8 py-5">
-            <div className="flex flex-row space-x-2">
-              <div className="h-3 w-3 rounded-full bg-red-400"></div>
-              <div className="h-3 w-3 rounded-full bg-orange-400"></div>
-              <div className="h-3 w-3 rounded-full bg-[#23950A]"></div>
+        {/* Updated Right Side - Code Terminal */}
+        <div className="order-1 lg:order-2 bg-black border border-[#2a2a2a] rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:border-violet-500/60 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]">
+          {/* Top bar */}
+          <div className="flex items-center justify-between px-6 py-4 bg-[#0d0d0d] border-b border-[#2a2a2a]">
+            <div className="flex items-center gap-3">
+              <div className="flex gap-2">
+                <div className="h-3.5 w-3.5 rounded-full bg-red-500"></div>
+                <div className="h-3.5 w-3.5 rounded-full bg-yellow-500"></div>
+                <div className="h-3.5 w-3.5 rounded-full bg-green-500"></div>
+              </div>
+              <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full border border-violet-500/30">
+                developer.js
+              </span>
             </div>
           </div>
-          <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+
+          {/* Code content */}
+          <div className="px-4 lg:px-8 py-6 lg:py-8 bg-black">
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
                 <span className="mr-2 text-pink-500">const</span>
@@ -124,7 +129,7 @@ function HeroSection() {
                 <span className="text-gray-400">{`',`}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-emerald-400">hireable:</span>
                 <span className="text-orange-400">function</span>
                 <span className="text-gray-400">{'() {'}</span>
               </div>

@@ -9,7 +9,7 @@ const supabase = createClient(
 );
 
 // local file path
-const localFilePath = "/Users/kunalraj/Downloads/Kunal_Raj_Resume.pdf" ;
+const localFilePath = "/Users/kunalraj/Downloads/Kunal_Raj_cv_Fullstack.pdf" ;
 
 // the filename that will always stay constant in Supabase
 const remoteFileName = "resume.pdf";
