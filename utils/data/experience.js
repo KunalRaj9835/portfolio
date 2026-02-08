@@ -36,7 +36,7 @@ export const experience = [
 
   {
     company: "Nurdd Club Pvt Ltd",
-    role: "MERN Stack Developer",
+    role: "MERN Stack Development Intern",
     duration: "Jul 2025 – Sep 2025",
     logo: "/logo/Nurdd.png",
     id: 2,
